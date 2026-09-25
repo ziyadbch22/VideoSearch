@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VideoSearch</title>
 
-```
 <style>
     * {
         box-sizing: border-box;
@@ -115,7 +114,6 @@
         font-size: 14px;
     }
 </style>
-```
 
 </head>
 
@@ -128,7 +126,6 @@
 
 <main>
 
-```
 <div class="search-container">
 
     <input
@@ -141,9 +138,9 @@
         Rechercher
     </button>
 
-    <label for="videoInput" class="video-button">
+    <button id="chooseVideoButton" type="button" class="video-button">
         📹 Choisir une vidéo
-    </label>
+    </button>
 
     <input
         type="file"
@@ -169,7 +166,6 @@
 <div id="status"></div>
 
 <div id="results"></div>
-```
 
 </main>
 
@@ -190,7 +186,12 @@
      * CHOISIR UNE VIDÉO
      */
 
-  ```javascript
+    const chooseVideoButton = document.getElementById("chooseVideoButton");
+
+    chooseVideoButton.addEventListener("click", function () {
+        videoInput.click();
+    });
+
 videoInput.addEventListener("change", async function () {
 
     const file = videoInput.files[0];
@@ -251,7 +252,6 @@ videoInput.addEventListener("change", async function () {
     }
 
 });
-```
 
 
 

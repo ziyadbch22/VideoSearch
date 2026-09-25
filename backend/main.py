@@ -1,4 +1,3 @@
-```python
 import json
 import os
 
@@ -233,4 +232,3 @@ async def upload_video(
         "segments":
             len(transcription["segments"])
     }
-```
